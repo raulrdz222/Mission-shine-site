@@ -4,41 +4,31 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mission Shine Detailing | San Antonio</title>
-<meta name="description" content="Mission Shine Detailing — premium, friendly mobile car detailing in San Antonio. Clear pricing, subscriptions, and fast online booking." />
+<meta name="description" content="Mission Shine Detailing — premium, friendly mobile car detailing in San Antonio. Honest packages, subscriptions, and fast online booking." />
 <meta name="theme-color" content="#0ea5e9" />
-
-<!-- Fonts + Tailwind -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Calendly -->
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
-
-<!-- AOS (Animate On Scroll) -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
 <style>
   html{-webkit-text-size-adjust:100%}
   body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-  .glass{backdrop-filter:saturate(160%) blur(10px); background:rgba(255,255,255,.85)}
-  .shine{background:linear-gradient(90deg,#e2e8f0,#fff,#e2e8f0);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:shine 6s linear infinite}
-  @keyframes shine{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  .glass{backdrop-filter:saturate(160%) blur(10px); background:rgba(255,255,255,.88)}
+  .tagline{letter-spacing:.08em}
   .card{transition:transform .25s ease, box-shadow .25s ease}
   .card:hover{transform:translateY(-3px); box-shadow:0 16px 40px rgba(2,132,199,.14)}
   .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:1rem;padding:.75rem 1.25rem;font-weight:600}
-  .btn-primary{background:#0ea5e9;color:#fff}
-  .btn-primary:hover{background:#0284c7}
-  .btn-ghost{background:#fff;border:1px solid #cbd5e1;color:#0f172a}
-  .btn-ghost:hover{background:#f8fafc}
-  /* Hero image overlay for that glossy, premium look */
+  .btn-primary{background:#0ea5e9;color:#fff}.btn-primary:hover{background:#0284c7}
+  .btn-ghost{background:#fff;border:1px solid #cbd5e1;color:#0f172a}.btn-ghost:hover{background:#f8fafc}
   .hero-wrap{position:relative;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(115%) contrast(110%);transform:scale(1.05)}
-  .hero-sheen{position:absolute;inset:0;background:radial-gradient(1200px 600px at 60% -10%,rgba(255,255,255,.35),transparent 55%),linear-gradient(to bottom,rgba(2,6,23,.25),rgba(2,6,23,.55))}
-  .shadow-inner-soft{box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+  .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(115%) contrast(110%);transform:scale(1.03)}
+  .hero-sheen{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,6,23,.25),rgba(2,6,23,.55))}
+  /* modal */
+  .modal{position:fixed;inset:0;background:rgba(2,6,23,.6);display:none;align-items:center;justify-content:center;padding:1rem;z-index:60}
+  .modal[open]{display:flex}
 </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -47,7 +37,7 @@
 <div class="w-full bg-sky-600 text-white text-sm">
   <div class="max-w-7xl mx-auto px-4 py-2 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
     <div class="font-semibold">🚗 First 30 Customers: <span class="underline">Simple Clean $35</span> (reg. $49)</div>
-    <a href="#" onclick="openCalendlyDeep(CALENDLY['Simple Clean'])" class="btn btn-ghost !text-white !border-white/40 hover:!bg-white hover:!text-sky-700">Book Now</a>
+    <button class="btn btn-ghost !text-white !border-white/40 hover:!bg-white hover:!text-sky-700" data-book="Simple Clean">Book Now</button>
   </div>
 </div>
 
@@ -56,10 +46,10 @@
   <div class="max-w-7xl mx-auto px-4">
     <div class="glass rounded-2xl px-4 py-3 border border-slate-200 shadow-lg shadow-sky-900/5 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3">
-        <img src="LOGO_URL_HERE" alt="Mission Shine Detailing logo" class="w-10 h-10 object-contain rounded">
+        <img src="LOGO_URL_HERE" alt="Mission Shine Detailing logo" class="w-12 h-12 object-contain rounded">
         <div class="leading-tight">
-          <div class="font-extrabold -mb-0.5">Mission <span class="shine">Shine</span> Detailing</div>
-          <div class="text-[11px] text-slate-500">San Antonio, TX • Mobile</div>
+          <div class="font-extrabold">Mission Shine Detailing</div>
+          <div class="text-[10px] text-slate-500 tagline">SHINE HARD. DRIVE PROUD.</div>
         </div>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -69,31 +59,27 @@
         <a href="#reviews" class="hover:text-sky-700">Reviews</a>
         <a href="#contact" class="hover:text-sky-700">Contact</a>
       </nav>
-      <a href="#" onclick="openCalendlyDeep(CALENDLY['Simple Clean'])" class="btn btn-primary">Book Now</a>
+      <button class="btn btn-primary" data-book="Simple Clean">Book Now</button>
     </div>
   </div>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero-wrap pt-40 pb-16">
-  <div class="hero-bg" style="background-image:url('HERO_IMAGE_URL_HERE');"></div>
-  <div class="hero-sheen"></div>
+  <div class="hero-bg" style="background-image:url('HERO_IMAGE_URL_HERE');"></div><div class="hero-sheen"></div>
   <div class="max-w-7xl mx-auto px-4 relative">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div data-aos="fade-right">
+        <!-- San Antonio text is now solid (no see-through), same font -->
         <h1 class="text-white drop-shadow-2xl text-4xl md:text-5xl font-extrabold leading-tight">
-          Premium, friendly detailing in <span class="shine">San Antonio</span>
+          Premium, friendly detailing in San Antonio
         </h1>
         <p class="mt-4 text-slate-100/90 text-lg leading-relaxed max-w-xl">
           Simple services done right. Clear timelines, honest scope, and fast booking. We come to you.
         </p>
-        <ul class="mt-4 text-slate-100/90 text-sm space-y-1">
-          <li>• Mobile service citywide</li>
-          <li>• Insured, professional team</li>
-          <li>• Eco-friendly, pH-balanced products</li>
-        </ul>
+        <div class="mt-2 text-white/90 text-sm font-semibold tagline">SHINE HARD. DRIVE PROUD.</div>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#" onclick="openCalendlyDeep(CALENDLY['Simple Clean'])" class="btn btn-primary shadow-lg">Book Simple Clean</a>
+          <button class="btn btn-primary shadow-lg" data-book="Simple Clean">Book Simple Clean</button>
           <a href="#services" class="btn btn-ghost">See Services</a>
         </div>
       </div>
@@ -120,7 +106,7 @@
           <li>• Inside/outside windows</li>
           <li>• Wheel faces & tire shine</li>
         </ul>
-        <a href="#" onclick="openCalendlyDeep(CALENDLY['Simple Clean'])" class="btn btn-primary mt-5">Book</a>
+        <button class="btn btn-primary mt-5" data-book="Simple Clean">Book</button>
       </div>
 
       <div class="card rounded-3xl border p-6 bg-white shadow-sm ring-2 ring-sky-500" data-aos="zoom-in" data-aos-delay="60">
@@ -134,7 +120,7 @@
           <li>• UV interior protectant</li>
           <li>• Door jambs cleaned</li>
         </ul>
-        <a href="#" onclick="openCalendlyDeep(CALENDLY['Deluxe Detail'])" class="btn btn-primary mt-5">Book</a>
+        <button class="btn btn-primary mt-5" data-book="Deluxe Detail">Book</button>
       </div>
 
       <div class="card rounded-3xl border p-6 bg-white shadow-sm" data-aos="zoom-in" data-aos-delay="100">
@@ -148,7 +134,7 @@
           <li>• Extra attention to vents & trim</li>
           <li>• Long-lasting protective wax</li>
         </ul>
-        <a href="#" onclick="openCalendlyDeep(CALENDLY['Premium Detail'])" class="btn btn-primary mt-5">Book</a>
+        <button class="btn btn-primary mt-5" data-book="Premium Detail">Book</button>
       </div>
 
       <div class="card rounded-3xl border p-6 bg-white shadow-sm" data-aos="zoom-in" data-aos-delay="140">
@@ -162,9 +148,23 @@
           <li>• Odor neutralizer treatment</li>
           <li>• High-gloss exterior finish</li>
         </ul>
-        <a href="#" onclick="openCalendlyDeep(CALENDLY['Ultimate Fresh'])" class="btn btn-primary mt-5">Book</a>
+        <button class="btn btn-primary mt-5" data-book="Ultimate Fresh">Book</button>
       </div>
     </div>
+
+    <!-- Add-ons (safe, no engine bay) -->
+    <h3 class="mt-12 text-xl font-semibold" data-aos="fade-up">Popular Add-ons</h3>
+    <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up">Pet Hair Removal <span class="font-semibold">$20 • +15–30 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="50">Odor/Ozone Treatment <span class="font-semibold">$35 • +20 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="100">Spray Ceramic Sealant (6–8w) <span class="font-semibold">$40 • +10–15 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="150">Headlight Restoration <span class="font-semibold">$45 • +30–45 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="200">Bug & Tar Removal <span class="font-semibold">$25 • +15 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="250">Spot Stain/Shampoo (seat or mat) <span class="font-semibold">$25 • +15–20 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="300">Rain-Repellent Glass <span class="font-semibold">$20 • +10 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="350">Child Seat Steam Sanitize <span class="font-semibold">$15 • +10 min</span></li>
+      <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up" data-aos-delay="400">Water Spot Removal (light) <span class="font-semibold">$30 • +15–25 min</span></li>
+    </ul>
   </div>
 </section>
 
@@ -172,35 +172,29 @@
 <section id="subscriptions" class="bg-white border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-4 py-16">
     <h2 class="text-3xl font-bold" data-aos="fade-up">Maintenance Subscriptions</h2>
-    <p class="mt-2 text-slate-600 max-w-2xl" data-aos="fade-up" data-aos-delay="60">Pick your service and frequency. Save vs. one-off bookings. First subscription visit **50% off** when you commit to 3 months.</p>
+    <p class="mt-2 text-slate-600 max-w-2xl" data-aos="fade-up" data-aos-delay="60">Pick your service & frequency. Save vs. one-off bookings. First subscription visit <strong>50% off</strong> with a 3-month commitment.</p>
 
     <div class="mt-8 grid md:grid-cols-3 gap-6">
       <div class="card rounded-3xl border p-6 bg-slate-50 shadow-sm" data-aos="zoom-in">
         <div class="text-sm font-bold text-slate-700">Weekly (4×/mo)</div>
         <ul class="mt-3 text-sm text-slate-700 space-y-1">
-          <li>Simple Clean — <strong>$42/visit</strong></li>
-          <li>Deluxe Detail — <strong>$89/visit</strong></li>
-          <li>Premium Detail — <strong>$149/visit</strong></li>
+          <li>Simple Clean — <strong>$42/visit</strong></li><li>Deluxe — <strong>$89/visit</strong></li><li>Premium — <strong>$149/visit</strong></li>
         </ul>
-        <button class="btn btn-primary mt-4" onclick="openSub('weekly')">Start weekly plan</button>
+        <button class="btn btn-primary mt-4" data-sub="weekly">Start weekly plan</button>
       </div>
       <div class="card rounded-3xl border p-6 bg-slate-50 shadow-sm ring-2 ring-sky-500" data-aos="zoom-in" data-aos-delay="60">
         <div class="text-sm font-bold text-slate-700">Every 2 Weeks (2×/mo)</div>
         <ul class="mt-3 text-sm text-slate-700 space-y-1">
-          <li>Simple Clean — <strong>$45/visit</strong></li>
-          <li>Deluxe Detail — <strong>$92/visit</strong></li>
-          <li>Premium Detail — <strong>$159/visit</strong></li>
+          <li>Simple Clean — <strong>$45/visit</strong></li><li>Deluxe — <strong>$92/visit</strong></li><li>Premium — <strong>$159/visit</strong></li>
         </ul>
-        <button class="btn btn-primary mt-4" onclick="openSub('biweekly')">Start bi-weekly plan</button>
+        <button class="btn btn-primary mt-4" data-sub="biweekly">Start bi-weekly plan</button>
       </div>
       <div class="card rounded-3xl border p-6 bg-slate-50 shadow-sm" data-aos="zoom-in" data-aos-delay="100">
         <div class="text-sm font-bold text-slate-700">Monthly (1×/mo)</div>
         <ul class="mt-3 text-sm text-slate-700 space-y-1">
-          <li>Simple Clean — <strong>$47/visit</strong></li>
-          <li>Deluxe Detail — <strong>$95/visit</strong></li>
-          <li>Premium Detail — <strong>$165/visit</strong></li>
+          <li>Simple Clean — <strong>$47/visit</strong></li><li>Deluxe — <strong>$95/visit</strong></li><li>Premium — <strong>$165/visit</strong></li>
         </ul>
-        <button class="btn btn-primary mt-4" onclick="openSub('monthly')">Start monthly plan</button>
+        <button class="btn btn-primary mt-4" data-sub="monthly">Start monthly plan</button>
       </div>
     </div>
   </div>
@@ -223,14 +217,13 @@
         <li class="flex gap-3"><span class="w-2 h-2 mt-2 rounded-full bg-sky-500"></span><span><strong>Community</strong> — San Antonio is home. We care about our neighbors.</span></li>
       </ul>
       <div class="mt-6 flex gap-3">
-        <a href="#" onclick="openCalendlyDeep(CALENDLY['Deluxe Detail'])" class="btn btn-primary">Book Deluxe</a>
+        <button class="btn btn-primary" data-book="Deluxe Detail">Book Deluxe</button>
         <a href="#contact" class="btn btn-ghost">Questions? Contact us</a>
       </div>
     </div>
-    <div data-aos="fade-left" class="rounded-3xl border bg-slate-50 p-4 shadow-inner-soft">
-      <!-- Swap in your mission/brand image if you like -->
-      <img src="HERO_IMAGE_URL_HERE" alt="Mission Shine Detail — San Antonio skyline" class="rounded-2xl w-full object-cover">
-      <p class="text-xs text-slate-500 mt-2">San Antonio • Proudly local</p>
+    <div data-aos="fade-left" class="rounded-3xl border bg-slate-50 p-4">
+      <img src="HERO_IMAGE_URL_HERE" alt="Mission Shine — San Antonio skyline & vehicles" class="rounded-2xl w-full object-cover">
+      <p class="text-xs text-slate-500 mt-2 text-center tagline">SHINE HARD. DRIVE PROUD.</p>
     </div>
   </div>
 </section>
@@ -242,7 +235,7 @@
     <div class="mt-8 grid md:grid-cols-3 gap-6">
       <div class="card rounded-2xl border bg-white p-6 shadow-sm" data-aos="zoom-in"><div class="font-semibold">María G.</div><div class="text-yellow-500">★★★★★</div><p class="mt-3 text-slate-700">They came to my office. My SUV looks brand new.</p></div>
       <div class="card rounded-2xl border bg-white p-6 shadow-sm" data-aos="zoom-in" data-aos-delay="60"><div class="font-semibold">J. Thompson</div><div class="text-yellow-500">★★★★★</div><p class="mt-3 text-slate-700">Booked the Deluxe—on time, super clean, fair price.</p></div>
-      <div class="card rounded-2xl border bg-white p-6 shadow-sm" data-aos="zoom-in" data-aos-delay="100"><div class="font-semibold">C. Nguyen</div><div class="text-yellow-500">★★★★★</div><p class="mt-3 text-slate-700">Great attention to detail. Will join the monthly plan.</p></div>
+      <div class="card rounded-2xl border bg-white p-6 shadow-sm" data-aos="zoom-in" data-aos-delay="100"><div class="font-semibold">C. Nguyen</div><div class="text-yellow-500">★★★★★</div><p class="mt-3 text-slate-700">Great attention to detail. Joining the monthly plan.</p></div>
     </div>
   </div>
 </section>
@@ -266,15 +259,19 @@
           <li><strong>Hours:</strong> Mon–Sat 8am–6pm</li>
         </ul>
         <div class="mt-4">
-          <a href="#" onclick="openCalendlyDeep(CALENDLY['Simple Clean'])" class="btn btn-primary">Book with Calendly</a>
+          <button class="btn btn-primary" data-book="Simple Clean">Book with Calendly</button>
         </div>
       </div>
-      <form onsubmit="sendEmail(event)" class="space-y-3">
+      <form id="contactForm" class="space-y-3">
         <input id="cname" class="w-full rounded-xl border p-3" placeholder="Your name" />
         <input id="cemail" type="email" class="w-full rounded-xl border p-3" placeholder="Your email" />
         <input id="cphone" class="w-full rounded-xl border p-3" placeholder="Phone" />
         <textarea id="cmsg" rows="3" class="w-full rounded-xl border p-3" placeholder="Message or preferred date/time"></textarea>
-        <button class="btn btn-ghost w-full md:w-auto">Send Request</button>
+        <label class="flex items-start gap-2 text-sm text-slate-700">
+          <input id="agreeEmail" type="checkbox" class="mt-1">
+          <span>I agree to the <a href="#terms" class="underline" onclick="openTerms(event)">Service Terms & Liability Waiver</a>.</span>
+        </label>
+        <button class="btn btn-ghost w-full md:w-auto" type="submit">Send Request</button>
       </form>
     </div>
   </div>
@@ -287,46 +284,109 @@
       <img src="LOGO_URL_HERE" class="w-8 h-8 object-contain rounded" alt="Mission Shine logo">
       <span class="font-semibold">Mission Shine Detailing</span>
     </div>
+    <div class="text-slate-400 text-xs sm:text-sm tagline">SHINE HARD. DRIVE PROUD.</div>
     <div class="text-slate-400 text-sm">© <span id="yr"></span> Mission Shine Detailing</div>
   </div>
 </footer>
 
 <!-- Floating CTA -->
-<a href="#" onclick="openCalendlyDeep(CALENDLY['Deluxe Detail'])" class="fixed bottom-6 right-4 md:right-6 shadow-lg rounded-full px-5 py-3 btn btn-primary">Book Now</a>
+<button class="fixed bottom-6 right-4 md:right-6 shadow-lg rounded-full px-5 py-3 btn btn-primary" data-book="Deluxe Detail">Book Now</button>
+
+<!-- TERMS MODAL -->
+<dialog id="termsModal" class="modal">
+  <div class="max-w-lg w-full bg-white rounded-2xl p-6">
+    <h3 class="text-xl font-bold">Service Terms & Liability Waiver</h3>
+    <div class="mt-3 text-sm text-slate-700 max-h-60 overflow-y-auto leading-6">
+      <p><strong>Before we begin:</strong> Please confirm you understand and agree to the following.</p>
+      <ul class="list-disc pl-5 mt-2 space-y-1">
+        <li>No engine bay cleaning is offered due to electrical risks.</li>
+        <li>We are not responsible for pre-existing damage, defects, or wear (paint, trim, upholstery, glass).</li>
+        <li>Customer removes valuables and child seats unless otherwise noted.</li>
+        <li>Heavily soiled vehicles may require extra time/cost — we will confirm before proceeding.</li>
+        <li>Weather or unsafe conditions may require rescheduling.</li>
+        <li>Water spot, odor, or stain removal is best-effort with no guarantee for severe cases.</li>
+      </ul>
+      <label class="flex items-start gap-2 mt-3">
+        <input type="checkbox" id="agreeTerms">
+        <span class="text-sm">I have read and agree to the Service Terms & Liability Waiver.</span>
+      </label>
+    </div>
+    <div class="mt-5 flex justify-end gap-2">
+      <button class="btn btn-ghost" onclick="closeTerms()">Cancel</button>
+      <button class="btn btn-primary" id="proceedBtn" disabled>Agree & Proceed</button>
+    </div>
+  </div>
+</dialog>
 
 <script>
-  // Calendly deep links (replace with your actual event URLs when you create them)
+  // Calendly deep links (replace with your actual event URLs if different)
   const CALENDLY = {
-    "Simple Clean":  "https://calendly.com/rajesrd1/simple-clean",
-    "Deluxe Detail": "https://calendly.com/rajesrd1/deluxe-detail",
+    "Simple Clean":"https://calendly.com/rajesrd1/simple-clean",
+    "Deluxe Detail":"https://calendly.com/rajesrd1/deluxe-detail",
     "Premium Detail":"https://calendly.com/rajesrd1/premium-detail",
     "Ultimate Fresh":"https://calendly.com/rajesrd1/ultimate-fresh",
-    "weekly":        "https://calendly.com/rajesrd1/weekly-simple-clean",
-    "biweekly":      "https://calendly.com/rajesrd1/biweekly-simple-clean",
-    "monthly":       "https://calendly.com/rajesrd1/monthly-simple-clean"
+    "weekly":"https://calendly.com/rajesrd1/weekly-simple-clean",
+    "biweekly":"https://calendly.com/rajesrd1/biweekly-simple-clean",
+    "monthly":"https://calendly.com/rajesrd1/monthly-simple-clean"
   };
 
-  function openCalendlyDeep(url){
-    Calendly.initPopupWidget({ url: (url || "https://calendly.com/rajesrd1") + "?hide_landing_page_details=1&hide_gdpr_banner=1" });
-  }
-  function openSub(freq){ openCalendlyDeep(CALENDLY[freq]); }
+  let pendingCalendlyUrl = null;
 
-  // Email fallback
-  function sendEmail(e){
-    e.preventDefault();
-    const n=document.getElementById('cname').value.trim();
-    const em=document.getElementById('cemail').value.trim();
-    const ph=document.getElementById('cphone').value.trim();
-    const m=document.getElementById('cmsg').value.trim();
-    if(!n||!em){ alert('Please add your name and email.'); return; }
-    const body=encodeURIComponent(`Name: ${n}\nEmail: ${em}\nPhone: ${ph}\nMessage: ${m}`);
-    location.href=`mailto:Rajesrd1@gmail.com?subject=Mission Shine Detailing – Booking Request&body=${body}`;
+  function launchCalendly(url){
+    Calendly.initPopupWidget({ url: url + "?hide_landing_page_details=1&hide_gdpr_banner=1" });
   }
 
-  document.addEventListener('DOMContentLoaded', ()=>{
-    AOS.init({ once:true, duration:700, easing:'ease-out' });
-    document.getElementById('yr').textContent=new Date().getFullYear();
+  // Terms modal handling
+  const modal = document.getElementById('termsModal');
+  const agreeTerms = document.getElementById('agreeTerms');
+  const proceedBtn = document.getElementById('proceedBtn');
+  agreeTerms.addEventListener('change', ()=>{ proceedBtn.disabled = !agreeTerms.checked; });
+
+  function openTerms(e){
+    if(e){ e.preventDefault(); }
+    modal.setAttribute('open','');
+  }
+  function closeTerms(){ modal.removeAttribute('open'); pendingCalendlyUrl = null; agreeTerms.checked = false; proceedBtn.disabled = true; }
+
+  // Any button with data-book opens modal first
+  document.addEventListener('click', (e)=>{
+    const btn = e.target.closest('[data-book]');
+    const sub = e.target.closest('[data-sub]');
+    if(btn){
+      e.preventDefault();
+      const svc = btn.getAttribute('data-book');
+      pendingCalendlyUrl = CALENDLY[svc] || "https://calendly.com/rajesrd1";
+      openTerms();
+    }
+    if(sub){
+      e.preventDefault();
+      const freq = sub.getAttribute('data-sub');
+      pendingCalendlyUrl = CALENDLY[freq] || "https://calendly.com/rajesrd1";
+      openTerms();
+    }
   });
+
+  // Proceed after agreeing
+  proceedBtn.addEventListener('click', ()=>{
+    if(pendingCalendlyUrl && agreeTerms.checked){
+      closeTerms();
+      launchCalendly(pendingCalendlyUrl);
+    }
+  });
+
+  // Contact form (requires checkbox too)
+  document.getElementById('contactForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const n=cname.value.trim(), em=cemail.value.trim(), ph=cphone.value.trim(), m=cmsg.value.trim();
+    if(!n||!em){ alert("Please add your name and email."); return; }
+    if(!document.getElementById('agreeEmail').checked){ alert("Please agree to the Service Terms & Liability Waiver."); return; }
+    const body=encodeURIComponent(
+      `Name: ${n}\nEmail: ${em}\nPhone: ${ph}\nMessage: ${m}\n\nCustomer confirmed acceptance of Service Terms & Liability Waiver.`
+    );
+    location.href=`mailto:Rajesrd1@gmail.com?subject=Mission Shine Detailing – Booking Request&body=${body}`;
+  });
+
+  document.addEventListener('DOMContentLoaded',()=>{ AOS.init({ once:true, duration:700, easing:'ease-out' }); document.getElementById('yr').textContent=new Date().getFullYear(); });
 </script>
 </body>
 </html>

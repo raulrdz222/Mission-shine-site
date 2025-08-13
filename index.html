@@ -13,6 +13,7 @@
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link rel="icon" href="https://github.com/raulrdz222/Mission-shine-site/raw/main/file_000000006d2c6230867323f1e8e480ca.png" />
 <style>
   html{-webkit-text-size-adjust:100%}
   body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
@@ -26,7 +27,6 @@
   .hero-wrap{position:relative;overflow:hidden}
   .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:saturate(115%) contrast(110%);transform:scale(1.03)}
   .hero-sheen{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,6,23,.25),rgba(2,6,23,.55))}
-  /* modal */
   .modal{position:fixed;inset:0;background:rgba(2,6,23,.6);display:none;align-items:center;justify-content:center;padding:1rem;z-index:60}
   .modal[open]{display:flex}
 </style>
@@ -46,7 +46,7 @@
   <div class="max-w-7xl mx-auto px-4">
     <div class="glass rounded-2xl px-4 py-3 border border-slate-200 shadow-lg shadow-sky-900/5 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3">
-        <img src="LOGO_URL_HERE" alt="Mission Shine Detailing logo" class="w-12 h-12 object-contain rounded">
+        <img src="https://github.com/raulrdz222/Mission-shine-site/raw/main/file_000000006d2c6230867323f1e8e480ca.png" alt="Mission Shine Detailing logo" class="w-12 h-12 object-contain rounded">
         <div class="leading-tight">
           <div class="font-extrabold">Mission Shine Detailing</div>
           <div class="text-[10px] text-slate-500 tagline">SHINE HARD. DRIVE PROUD.</div>
@@ -66,11 +66,11 @@
 
 <!-- HERO -->
 <section id="home" class="hero-wrap pt-40 pb-16">
-  <div class="hero-bg" style="background-image:url('HERO_IMAGE_URL_HERE');"></div><div class="hero-sheen"></div>
+  <!-- Replace MISSION_URL below with your mission image RAW link -->
+  <div class="hero-bg" style="background-image:url('MISSION_URL');"></div><div class="hero-sheen"></div>
   <div class="max-w-7xl mx-auto px-4 relative">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div data-aos="fade-right">
-        <!-- San Antonio text is now solid (no see-through), same font -->
         <h1 class="text-white drop-shadow-2xl text-4xl md:text-5xl font-extrabold leading-tight">
           Premium, friendly detailing in San Antonio
         </h1>
@@ -152,7 +152,6 @@
       </div>
     </div>
 
-    <!-- Add-ons (safe, no engine bay) -->
     <h3 class="mt-12 text-xl font-semibold" data-aos="fade-up">Popular Add-ons</h3>
     <ul class="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
       <li class="flex items-center justify-between rounded-xl border bg-white p-4 shadow-sm" data-aos="fade-up">Pet Hair Removal <span class="font-semibold">$20 • +15–30 min</span></li>
@@ -222,7 +221,8 @@
       </div>
     </div>
     <div data-aos="fade-left" class="rounded-3xl border bg-slate-50 p-4">
-      <img src="HERO_IMAGE_URL_HERE" alt="Mission Shine — San Antonio skyline & vehicles" class="rounded-2xl w-full object-cover">
+      <!-- Replace MISSION_URL below with your mission image RAW link -->
+      <img src="MISSION_URL" alt="Mission Shine — San Antonio skyline & vehicles" class="rounded-2xl w-full object-cover">
       <p class="text-xs text-slate-500 mt-2 text-center tagline">SHINE HARD. DRIVE PROUD.</p>
     </div>
   </div>
@@ -237,13 +237,6 @@
       <div class="card rounded-2xl border bg-white p-6 shadow-sm" data-aos="zoom-in" data-aos-delay="60"><div class="font-semibold">J. Thompson</div><div class="text-yellow-500">★★★★★</div><p class="mt-3 text-slate-700">Booked the Deluxe—on time, super clean, fair price.</p></div>
       <div class="card rounded-2xl border bg-white p-6 shadow-sm" data-aos="zoom-in" data-aos-delay="100"><div class="font-semibold">C. Nguyen</div><div class="text-yellow-500">★★★★★</div><p class="mt-3 text-slate-700">Great attention to detail. Joining the monthly plan.</p></div>
     </div>
-  </div>
-</section>
-
-<!-- AREAS -->
-<section class="bg-white border-t border-slate-200">
-  <div class="max-w-7xl mx-auto px-4 py-12 text-center">
-    <p class="text-slate-600">Serving <strong>Stone Oak</strong>, <strong>Alamo Heights</strong>, <strong>Helotes</strong>, <strong>Southtown</strong>, and all of <strong>San Antonio</strong>.</p>
   </div>
 </section>
 
@@ -281,7 +274,7 @@
 <footer class="bg-slate-900 text-slate-100">
   <div class="max-w-7xl mx-auto px-4 py-10 flex items-center justify-between">
     <div class="flex items-center gap-2">
-      <img src="LOGO_URL_HERE" class="w-8 h-8 object-contain rounded" alt="Mission Shine logo">
+      <img src="https://github.com/raulrdz222/Mission-shine-site/raw/main/file_000000006d2c6230867323f1e8e480ca.png" class="w-8 h-8 object-contain rounded" alt="Mission Shine logo">
       <span class="font-semibold">Mission Shine Detailing</span>
     </div>
     <div class="text-slate-400 text-xs sm:text-sm tagline">SHINE HARD. DRIVE PROUD.</div>
@@ -289,15 +282,11 @@
   </div>
 </footer>
 
-<!-- Floating CTA -->
-<button class="fixed bottom-6 right-4 md:right-6 shadow-lg rounded-full px-5 py-3 btn btn-primary" data-book="Deluxe Detail">Book Now</button>
-
 <!-- TERMS MODAL -->
 <dialog id="termsModal" class="modal">
   <div class="max-w-lg w-full bg-white rounded-2xl p-6">
     <h3 class="text-xl font-bold">Service Terms & Liability Waiver</h3>
     <div class="mt-3 text-sm text-slate-700 max-h-60 overflow-y-auto leading-6">
-      <p><strong>Before we begin:</strong> Please confirm you understand and agree to the following.</p>
       <ul class="list-disc pl-5 mt-2 space-y-1">
         <li>No engine bay cleaning is offered due to electrical risks.</li>
         <li>We are not responsible for pre-existing damage, defects, or wear (paint, trim, upholstery, glass).</li>
@@ -319,7 +308,6 @@
 </dialog>
 
 <script>
-  // Calendly deep links (replace with your actual event URLs if different)
   const CALENDLY = {
     "Simple Clean":"https://calendly.com/rajesrd1/simple-clean",
     "Deluxe Detail":"https://calendly.com/rajesrd1/deluxe-detail",
@@ -331,62 +319,36 @@
   };
 
   let pendingCalendlyUrl = null;
+  function launchCalendly(url){ Calendly.initPopupWidget({ url: url + "?hide_landing_page_details=1&hide_gdpr_banner=1" }); }
 
-  function launchCalendly(url){
-    Calendly.initPopupWidget({ url: url + "?hide_landing_page_details=1&hide_gdpr_banner=1" });
-  }
-
-  // Terms modal handling
   const modal = document.getElementById('termsModal');
   const agreeTerms = document.getElementById('agreeTerms');
   const proceedBtn = document.getElementById('proceedBtn');
   agreeTerms.addEventListener('change', ()=>{ proceedBtn.disabled = !agreeTerms.checked; });
-
-  function openTerms(e){
-    if(e){ e.preventDefault(); }
-    modal.setAttribute('open','');
-  }
+  function openTerms(e){ if(e){ e.preventDefault(); } modal.setAttribute('open',''); }
   function closeTerms(){ modal.removeAttribute('open'); pendingCalendlyUrl = null; agreeTerms.checked = false; proceedBtn.disabled = true; }
 
-  // Any button with data-book opens modal first
   document.addEventListener('click', (e)=>{
     const btn = e.target.closest('[data-book]');
     const sub = e.target.closest('[data-sub]');
-    if(btn){
-      e.preventDefault();
-      const svc = btn.getAttribute('data-book');
-      pendingCalendlyUrl = CALENDLY[svc] || "https://calendly.com/rajesrd1";
-      openTerms();
-    }
-    if(sub){
-      e.preventDefault();
-      const freq = sub.getAttribute('data-sub');
-      pendingCalendlyUrl = CALENDLY[freq] || "https://calendly.com/rajesrd1";
-      openTerms();
-    }
+    if(btn){ e.preventDefault(); pendingCalendlyUrl = CALENDLY[btn.getAttribute('data-book')] || "https://calendly.com/rajesrd1"; openTerms(); }
+    if(sub){ e.preventDefault(); pendingCalendlyUrl = CALENDLY[sub.getAttribute('data-sub')] || "https://calendly.com/rajesrd1"; openTerms(); }
   });
 
-  // Proceed after agreeing
   proceedBtn.addEventListener('click', ()=>{
-    if(pendingCalendlyUrl && agreeTerms.checked){
-      closeTerms();
-      launchCalendly(pendingCalendlyUrl);
-    }
+    if(pendingCalendlyUrl && agreeTerms.checked){ closeTerms(); launchCalendly(pendingCalendlyUrl); }
   });
 
-  // Contact form (requires checkbox too)
-  document.getElementById('contactForm').addEventListener('submit', (e)=>{
+  document.getElementById('contactForm')?.addEventListener('submit', (e)=>{
     e.preventDefault();
     const n=cname.value.trim(), em=cemail.value.trim(), ph=cphone.value.trim(), m=cmsg.value.trim();
     if(!n||!em){ alert("Please add your name and email."); return; }
     if(!document.getElementById('agreeEmail').checked){ alert("Please agree to the Service Terms & Liability Waiver."); return; }
-    const body=encodeURIComponent(
-      `Name: ${n}\nEmail: ${em}\nPhone: ${ph}\nMessage: ${m}\n\nCustomer confirmed acceptance of Service Terms & Liability Waiver.`
-    );
+    const body=encodeURIComponent(`Name: ${n}\nEmail: ${em}\nPhone: ${ph}\nMessage: ${m}\n\nCustomer confirmed acceptance of Service Terms & Liability Waiver.`);
     location.href=`mailto:Rajesrd1@gmail.com?subject=Mission Shine Detailing – Booking Request&body=${body}`;
   });
 
-  document.addEventListener('DOMContentLoaded',()=>{ AOS.init({ once:true, duration:700, easing:'ease-out' }); document.getElementById('yr').textContent=new Date().getFullYear(); });
+  document.addEventListener('DOMContentLoaded',()=>{ AOS?.init?.({ once:true, duration:700, easing:'ease-out' }); document.getElementById('yr').textContent=new Date().getFullYear(); });
 </script>
 </body>
 </html>

@@ -4,65 +4,124 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mission Shine Detailing | San Antonio Car Detailing</title>
-  <meta name="description" content="Premium yet friendly car detailing in San Antonio. Simple Clean $35. FIRST20 promo: Simple Clean $20 for first 20 customers. Book online." />
+  <meta name="description" content="Premium yet friendly car detailing in San Antonio. FIRST20 promo: Simple Clean $20 for first 20 customers. Book online with clear pricing and time slots." />
   <meta name="theme-color" content="#1e40af" />
 
-  <!-- Google Fonts (HTTPS) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Tailwind via CDN (HTTPS) -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Calendly widget (HTTPS) -->
-  <link
-    href="https://assets.calendly.com/assets/external/widget.css"
-    rel="stylesheet"
-  />
-  <script
-    src="https://assets.calendly.com/assets/external/widget.js"
-    type="text/javascript"
-  ></script>
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 
   <style>
-    :root { --shine: #93c5fd; }
-    body { font-family: Inter, system-ui, sans-serif; margin: 0; }
-    .text-shine {
-      background: linear-gradient(90deg, #e5e7eb, white, #e5e7eb);
+    body { font-family: Inter, sans-serif; }
+    .glass { backdrop-filter: blur(10px) saturate(160%); background: rgba(255,255,255,0.8); }
+    .shine-text {
+      background: linear-gradient(90deg,#facc15,#fef3c7,#facc15);
+      background-size: 200% 100%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      background-size: 200% 100%;
-      animation: shine 6s linear infinite;
+      animation: shine 5s linear infinite;
     }
     @keyframes shine {
       0% { background-position: 200% 0; }
       100% { background-position: -200% 0; }
     }
-    .glass {
-      backdrop-filter: saturate(160%) blur(8px);
-      background: rgba(255, 255, 255, 0.75);
-    }
   </style>
 </head>
-
 <body class="bg-slate-50 text-slate-800">
-  <!-- Navigation, Hero, Services, Subscriptions, Booking, etc. -->
-  <!-- Omitted here for brevity, but ensure all resources are HTTPS above -->
-  <script>
-    // Calendly integration
-    document.addEventListener("DOMContentLoaded", function() {
-      document.querySelectorAll("[data-calendly]").forEach(function(el) {
-        el.addEventListener("click", function(e) {
-          e.preventDefault();
-          Calendly.initPopupWidget({ url: this.getAttribute("data-calendly") });
-        });
-      });
-    });
-  </script>
+
+<!-- Header -->
+<header class="glass fixed w-full top-0 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 bg-blue-600 rounded-lg"></div>
+      <span class="font-extrabold text-lg">Mission Shine Detailing</span>
+    </div>
+    <a href="#services" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold">Book Now</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-gradient-to-r from-blue-50 to-white pt-28 pb-16 text-center">
+  <h1 class="text-4xl font-extrabold mb-4">Premium, Friendly Car Detailing in <span class="shine-text">San Antonio</span></h1>
+  <p class="max-w-xl mx-auto text-lg mb-6">Launch Special: <strong>FIRST20</strong> code makes Simple Clean just $20 — first 20 customers only!</p>
+  <a data-calendly="https://calendly.com/rajesrd1/simple-clean" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700">Book Your Spot</a>
+</section>
+
+<!-- Services -->
+<section id="services" class="max-w-6xl mx-auto py-16">
+  <h2 class="text-3xl font-bold mb-8 text-center">Our Services</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white shadow p-6 rounded-xl">
+      <h3 class="font-bold text-xl mb-2">Simple Clean</h3>
+      <p class="text-sm mb-4">Quick interior vacuum, wipe down, and exterior wash. Perfect for maintenance.</p>
+      <p class="font-semibold">45 min — $35 <span class="text-green-600">(Promo: $20)</span></p>
+      <a data-calendly="https://calendly.com/rajesrd1/simple-clean" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Book</a>
+    </div>
+    <div class="bg-white shadow p-6 rounded-xl">
+      <h3 class="font-bold text-xl mb-2">Deluxe Detail</h3>
+      <p class="text-sm mb-4">Full interior shampoo, exterior wax, and deep clean of all surfaces.</p>
+      <p class="font-semibold">1 hr 30 min — $79</p>
+      <a data-calendly="https://calendly.com/rajesrd1/deluxe-detail" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Book</a>
+    </div>
+    <div class="bg-white shadow p-6 rounded-xl">
+      <h3 class="font-bold text-xl mb-2">Premium Detail</h3>
+      <p class="text-sm mb-4">Paint polish, ceramic coat option, engine bay clean, full interior/exterior detail.</p>
+      <p class="font-semibold">2 hr — $149</p>
+      <a data-calendly="https://calendly.com/rajesrd1/premium-detail" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Book</a>
+    </div>
+    <div class="bg-white shadow p-6 rounded-xl">
+      <h3 class="font-bold text-xl mb-2">Ultimate Showroom</h3>
+      <p class="text-sm mb-4">Multi-step paint correction, ceramic coat, full restoration detail.</p>
+      <p class="font-semibold">3 hr — $249</p>
+      <a data-calendly="https://calendly.com/rajesrd1/ultimate-showroom" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Book</a>
+    </div>
+  </div>
+</section>
+
+<!-- Subscriptions -->
+<section class="bg-blue-50 py-16">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8 text-center">Subscription Plans</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold text-xl mb-2">Weekly Detail</h3>
+        <p class="mb-4">Perfect for keeping your car spotless year-round.</p>
+        <p class="font-semibold">$120/month — 4 visits</p>
+        <a data-calendly="https://calendly.com/rajesrd1/weekly-detail" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Subscribe</a>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-bold text-xl mb-2">Monthly Detail</h3>
+        <p class="mb-4">Deep clean once a month to keep your car looking fresh.</p>
+        <p class="font-semibold">$90/month — 1 visit</p>
+        <a data-calendly="https://calendly.com/rajesrd1/monthly-detail" class="mt-3 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-800 text-white py-8 text-center">
+  <p class="text-sm">&copy; <span id="year"></span> Mission Shine Detailing — San Antonio, TX</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll("[data-calendly]").forEach(function(btn) {
+  btn.addEventListener("click", function(e) {
+    e.preventDefault();
+    Calendly.initPopupWidget({ url: this.getAttribute("data-calendly") });
+  });
+});
+</script>
+
 </body>
 </html>
